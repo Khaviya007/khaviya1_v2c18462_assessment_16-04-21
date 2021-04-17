@@ -1,20 +1,26 @@
 package com.test;
 public class String6 {
-	public static void main(String[] args) {
-		String str1 ="XYZ";
-		String str2 ="YXZ";  
-        
-        if(str1.length()!=str2.length()){  
-            System.out.println("2nd string is not a rotation of 1st string");  
-        }  
-        else {  
-        	str1=str1.concat(str1);  
-            if(str1.indexOf(str2)!=-1)  
-                System.out.println("2nd string is a rotation of 1st string");  
-            else  
-                System.out.println("2nd string is not a rotation of 1st string");  
-	}
-	}
+	 public static boolean checkRotation(String st1, String st2) {  
+	        if (st1.length() != st2.length()) {  
+	            return false;  
+	        }  
+	        String st3 = st1 + st1;  
+	        if (st3.contains(st2))  
+	            return true;  
+	        else  
+	            return false;  
+	    }  
+	   
+	    public static void main(String[] args) {  
+	        String str1 = "XYZ";  
+	        String str2 = "YXZ";  
+	        System.out.println("Checking if a string is rotation of another");  
+	        if (checkRotation(str1, str2)) {  
+	            System.out.println(str2 + "is rotation of" + str1);  
+	        } else {  
+	            System.out.println(str2 + "is not rotation of" + str1);  
+	        }  
+	    }  
 }  
 
 	
