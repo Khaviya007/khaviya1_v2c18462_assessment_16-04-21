@@ -9,7 +9,10 @@ public class Singlylist {
 	        list.add("Sam");  
 	        list.add("Jhon");
 	        
-	          System.out.println("List is:"+list); 	        	          
+	          System.out.println("List is:"+list); 
+	          Collections.reverse(list);	          	         	           
+	          System.out.println("ArrayList After Reverse :");	           
+	          System.out.println(list);
 	          }  	       
 	    }  
 	  
